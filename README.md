@@ -1,7 +1,7 @@
 # ProPack: Executing Concurrent Serverless Functions Faster and Cheaper
 
 ### Description
-At high levels of concurrency, service time of serverless applications depend on the scaling time to reach the high concurrency. ProPack packs multiple serverless functions inside one function instance to reduce the scaling time. In this process it also reduces the execution expense incurred to the end user as the number of function instances spawned decrease. ProPack solves a joint optimization problem by optimizing for both service time and expense.</br> 
+At high levels of concurrency, service time of serverless applications depend on the scaling time to reach the high concurrency. ProPack packs multiple serverless functions inside one function instance to reduce the scaling time. In this process it also reduces the execution expense incurred to the end user as the number of spawned function instances decrease. ProPack solves a joint optimization problem by optimizing for both service time and expense.</br> 
 
 ### Evaluated Benchmarks
 We use commonly used embarrasingly parallel benchmarks which are frequently used as serverless applications and are also part of HPC workflows. The benchmarks we use are (1) [Thousand Island Scanner](https://github.com/qianl15/this)(video) -- which is a distributed video processing benchmark, (2) [Map reduce Sort](https://github.com/Intel-bigdata/HiBench) -- which is a Hadoop implementation of sorting algorithm, and (3) [Stateless Cost](https://github.com/SJTU-IPADS/ServerlessBench/tree/master/Testcase10-Stateless-costs) -- which is a typical parallel serverless application performing image processing. </br>
