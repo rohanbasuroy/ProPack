@@ -32,7 +32,7 @@ cd ./deployment_pack/<benchmark_name>/
 
 ```
     
-Inside each *<benchmark_name>* directory under *deployment_pack*, the *pre-compiled binaries* for the benchamrks are inside the *test.zip* file. The above command ships the files of all the tasks to AWS Lambda serverless platform for deployment. For the *<benchmark_name>*, provide the name of the benchmark and for *<lambda_s3_role_id>* provide the execution role id created in setp (2). After deployment, the input files of the tasks are stored in a S3 bucket.</br>
+Inside each <benchmark_name> directory under *deployment_pack*, the *pre-compiled binaries* for the benchamrks are inside the *test.zip* file. The above command ships the files of all the tasks to AWS Lambda serverless platform for deployment. For the <benchmark_name>, provide the name of the benchmark and for <lambda_s3_role_id> provide the execution role id created in setp (2). After deployment, the input files of the tasks are stored in a S3 bucket.</br>
 
 (4) *Determine the scaling time and service time:* </br>
 ```
@@ -53,7 +53,7 @@ This determines the delay due to packing multiple functions inside one function 
 python3 ./propack_performance/<optimization_objective>/<benchmark_name>/<metric>/run.py 
 
 ```
-From steps (4) and (5) this command finds the packing degree and runs ProPack, which packs multiple functions inside one function instance. *<optimization_objective>* can be to optimize for only *cost* or only *time* or *both* cost and time. *<metric>* can be *tail*, *median* (med), or *total* (net) to mimimize tail latency (95th percentile), median latency or total latency of service time, respectively. The generated files are *final_output_<x>_1.txt*, and *final_output_<x>_optima.txt* which contains the scaling time, service time and cost of running propack and their optimal (Oracle) values, respectively. It also generates *response.txt* files which contain the service time and scaling time of each individual function instances separately. </br>
+From steps (4) and (5) this command finds the packing degree and runs ProPack, which packs multiple functions inside one function instance. <optimization_objective> can be to optimize for only *cost* or only *time* or *both* cost and time. <metric> can be *tail*, *median* (med), or *total* (net) to mimimize tail latency (95th percentile), median latency or total latency of service time, respectively. The generated files are *final_output_x_1.txt*, and *final_output_x_optima.txt* which contains the scaling time, service time and cost of running propack and their optimal (Oracle) values, respectively. It also generates *response.txt* files which contain the service time and scaling time of each individual function instances separately. </br>
 
 ### Directory structure
 
