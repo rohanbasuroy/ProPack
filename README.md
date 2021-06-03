@@ -4,7 +4,7 @@
 At high levels of concurrency, service time of serverless applications depend on the scaling time to reaching the high concurrency. ProPack packs multiple serverless functions inside one function instance to reduce the scaling time. In this process it also reduces the execution expense incurred to the end user as the number of function instances spawned decrease. ProPack solves a joint optimization problem by optimizing for both service time and expense.</br> 
 
 #### Evaluated Benchmarks
-We use commonly used embarrasingly parallel benchmarks which are frequently used as serverless applications and are also part of HPC workflows. The benchmarks we use are (1) [Thousand island Scanner](https://github.com/qianl15/this)(video) -- which is a distributed video processing benchmark, (2) [Map reduce Sort](https://github.com/Intel-bigdata/HiBench) -- which is a Hadoop implementation of sorting algorithm, and (3) [Stateless Cost](https://github.com/SJTU-IPADS/ServerlessBench/tree/master/Testcase10-Stateless-costs) -- which is a typical parallel serverless application performing image processing. </br>
+We use commonly used embarrasingly parallel benchmarks which are frequently used as serverless applications and are also part of HPC workflows. The benchmarks we use are (1) [Thousand Island Scanner](https://github.com/qianl15/this)(video) -- which is a distributed video processing benchmark, (2) [Map reduce Sort](https://github.com/Intel-bigdata/HiBench) -- which is a Hadoop implementation of sorting algorithm, and (3) [Stateless Cost](https://github.com/SJTU-IPADS/ServerlessBench/tree/master/Testcase10-Stateless-costs) -- which is a typical parallel serverless application performing image processing. </br>
 
 ### Implementation Details
 In its performance estimation phase, ProPack uses its analytical model to calcuate the optimal packing degree for different application at different levels of concurrency. Accordingly, ProPack spawns serverless function instances on the serverless platform by packing optimal number of functions inside them. ProPack is implemented in Python3.6. and is easily portable to use with multiple cloud providers like Amazon Web Services (AWS),Google Cloud, and Microsoft Azure. As a dependency, it only requires the command line interface (CLI) of the respective cloudprovider to be installed and configured with the user account cre-dentials. ProPack resides in a local machine and interacts with the cloud provider's serverless platform with the cloud CLI. ProPack stores the information of the calculated optimal packing degree for all future executions of the serverless function instances. </br>
@@ -89,7 +89,7 @@ It contains ProPack's perforamnce and optimal (Oracle) performance for different
 ```
 It contains the comparison of ProPack with Pywren
 
-#### Competing Techniques
+### Competing Techniques
 ProPack packs multiple serverless functions together inside one function instance. Its main idea is to optimally find the number of functions to pack inside one instance (packing degree) to reduce the service time and expense at a high concurrency. We express all our results as a percentage of improvement over no packing, which is the traditional way of executing serverless functions. We perform exhaustive offline search to obtain the optimal packing degree and compare it with ProPack's performance.
 
 We also compare ProPack with the state-of-the-art serverless workload manager [Pywren](http://pywren.io/).
