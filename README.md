@@ -1,6 +1,7 @@
 # ProPack: Executing Concurrent Serverless Functions Faster and Cheaper
 
 If you use ProPack in your research, please cite our HPDC 2023 paper:
+
 *Rohan Basu Roy, Tirthak Patel, Richmond Liew, Yadu Nand Babuji, Ryan Chard, and Devesh Tiwari. 2023. "ProPack: Executing Concurrent Serverless Functions Faster and Cheaper". In Proceedings of ACM International Symposium on High-Performance Parallel and Distributed Computing (HPDC 2023).*
 
 ### Description
