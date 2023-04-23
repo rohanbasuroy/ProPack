@@ -1,5 +1,8 @@
 # ProPack: Executing Concurrent Serverless Functions Faster and Cheaper
 
+If you use ProPack in your research, please cite our HPDC 2023 paper:
+*Rohan Basu Roy, Tirthak Patel, Richmond Liew, Yadu Nand Babuji, Ryan Chard, and Devesh Tiwari. 2023. "ProPack: Executing Concurrent Serverless Functions Faster and Cheaper". In Proceedings of ACM International Symposium on High-Performance Parallel and Distributed Computing (HPDC 2023).*
+
 ### Description
 At high levels of concurrency, service time of serverless applications depend on the scaling time to reach the high concurrency. ProPack packs multiple serverless functions inside one function instance to reduce the scaling time. In this process it also reduces the execution expense incurred to the end user as the number of spawned function instances decrease. ProPack solves a joint optimization problem by optimizing for both service time and expense.</br> 
 
